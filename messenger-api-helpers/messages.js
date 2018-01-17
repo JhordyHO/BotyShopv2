@@ -41,7 +41,7 @@ const openExistingListButton = (listUrl, buttonText = 'Edit List') => {
  * @returns {object} -
  *   Message to create a button pointing to the new list form.
  */
-const createListButton = (apiUri, buttonTitle = 'Create a List') => {
+const createListButton = (apiUri, buttonTitle = 'Crear Lista') => {
   return {
     type: 'web_url',
     url: `${apiUri}/lists/new`,
@@ -70,10 +70,10 @@ const welcomeMessage = (apiUri) => {
       type: 'template',
       payload: {
         template_type: 'button',
-        text: 'Ready to make a shared list with your friends? Everyone can add items, check things off, and stay in sync.',
+        text: 'Menssage despues de aver echo clik en el botton empezar',
         buttons: [
           createListButton(apiUri),
-        ],
+        ],Your list was created.
       },
     },
   };
@@ -151,7 +151,7 @@ const paginatedListsMessage = (apiUri, action, lists, offset = 0) => {
   if (lists.length > (offset + 4)) {
     buttons = [
       {
-        title: 'View More',
+        title: 'Ver mas',
         type: 'postback',
         payload: `${action}_OFFSET_${offset + 4}`,
       },
@@ -175,7 +175,7 @@ const paginatedListsMessage = (apiUri, action, lists, offset = 0) => {
  * Message that informs the user that their list has been created.
  */
 const listCreatedMessage = {
-  text: 'Your list was created.',
+  text: 'Su lista ha sido creada.',
 };
 
 /**
@@ -198,7 +198,7 @@ const shareListMessage = (apiUri, listId, title, buttonText) => {
         elements: [{
           title: title,
           image_url: `${apiUri}/media/button-cover.png`,
-          subtitle: 'A shared list from Tasks',
+          subtitle: 'Compartir Tareas de la Lista',
           default_action: {
             type: 'web_url',
             url: urlToList,

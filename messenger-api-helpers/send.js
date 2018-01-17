@@ -95,7 +95,7 @@ const sendLists = (recipientId, action, lists, offset) => {
 
     sendMessage(
       recipientId,
-      messages.shareListMessage(APP_URL, id, title, 'Open List'),
+      messages.shareListMessage(APP_URL, id, title, 'Abrir Lista 🤗'),
     );
 
     break;
@@ -119,7 +119,7 @@ const sendListCreated = (recipientId, listId, title) => {
     recipientId,
     [
       messages.listCreatedMessage,
-      messages.shareListMessage(APP_URL, listId, title, 'Open List'),
+      messages.shareListMessage(APP_URL, listId, title, 'Abrir mi lista 🤙'),
     ]);
 };
 

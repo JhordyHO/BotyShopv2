@@ -49,19 +49,19 @@ const persistentMenu = () => {
       call_to_actions: [
         {
           type: 'web_url',
-          title: 'Create List',
+          title: 'Crear Lista 👍',
           url: `${APP_URL}/lists/new`,
           webview_height_ratio: 'tall',
           messenger_extensions: true,
         },
         {
           type: 'postback',
-          title: 'My Lists',
+          title: 'Mi Lista ❤ ',
           payload: 'owned_lists',
         },
         {
           type: 'postback',
-          title: 'Shared With Me',
+          title: 'Compartir 🤑',
           payload: 'subscribed_lists',
         },
       ],
